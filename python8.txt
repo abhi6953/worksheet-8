@@ -1,0 +1,76 @@
+worksheet 8
+python
+
+1. option c
+2. option b
+3. option c
+4. option a
+5. option d
+6. option c
+7. option a
+8. option c
+9. option b,c
+10. option a,b
+
+11. 
+num=int(input('write'))
+
+factorial = 1
+
+if num < 0:
+   print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   for i in range(1,num + 1):
+       factorial = factorial*i
+   print("The factorial of",num,"is",factorial)
+
+12.
+num = int(input("Enter a number: "))  
+  
+if num > 1:  
+   for i in range(2,num):  
+       if (num % i) == 0:  
+           print(num,"is not a prime number")  
+           print(i,"times",num//i,"is",num)  
+           break  
+   else:  
+       print(num,"is a prime number")  
+         
+else:  
+   print(num,"is a composite number")
+
+13.
+def isPalindrome(str):
+ 
+    for i in range(0, int(len(str)/2)):
+        if str[i] != str[len(str)-i-1]:
+            return False
+    return True
+ 
+
+s = "tamil"
+ans = isPalindrome(s)
+ 
+if (ans):
+    print("Yes")
+else:
+    print("No")
+
+14.
+from math import sqrt
+print("Input lengths of shorter triangle sides:")
+a = float(input("a: "))
+b = float(input("b: "))
+c = sqrt(a**2 + b**2)
+print("The length of the hypotenuse is:", c )
+
+15.
+from collections import Counter
+test_str = "abhishekabhishek"
+res = Counter(test_str)
+print("Count of all characters in abhishekabhishek is :\n "
+                                           +  str(res))
+
+

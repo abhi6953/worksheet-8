@@ -1,0 +1,41 @@
+worksheet 8
+Statistics
+
+1. option b
+2. option b
+3. option d
+4. option b
+5. option a
+6. option d
+7. option a
+8. option a
+9. option b
+10. option d
+11. option a
+12. option c
+
+13. 
+Statistical Analysis. Analysis of Variance, i.e. ANOVA in SPSS, is used for examining the differences in the mean values of the dependent variable associated with the effect of the controlled independent variables, 
+after taking into account the influence of the uncontrolled independent variables.
+Essentially, ANOVA in SPSS is used as the test of means for two or more populations.
+ANOVA in SPSS must have a dependent variable which should be metric (measured using an interval or ratio scale). 
+ANOVA in SPSS must also have one or more independent variables, which should be categorical in nature. In ANOVA in SPSS, categorical independent variables are called factors. 
+A particular combination of factor levels, or categories, is called a treatment.
+In ANOVA in SPSS, there is one way ANOVA which involves only one categorical variable, or a single factor. For example, if a researcher wants to examine whether heavy, medium, light and nonusers of cereals differed in their preference for Total cereal, then the differences can be examined by the one way ANOVA in SPSS. In one way ANOVA in SPSS, a treatment is the same as the factor level.
+
+14.
+The factorial ANOVA has a several assumptions that need to be fulfilled – (1) interval data of the dependent variable, (2) normality, (3) homoscedasticity, and (4) no multicollinearity.  
+Furthermore similar to all tests that are based on variation (e.g. t-test, regression analysis, and correlation analyses) the quality of results is stronger when the sample contains a lot of variation – i.e., 
+the variation is unrestricted and not truncated.
+Firstly, the factorial ANOVA requires the dependent variable in the analysis to be of metric measurement level (that is ratio or interval data) the independent variables can be nominal or better.  
+If the independent variables are not nominal or ordinal they need to be grouped first before the factorial ANOVA can be done.
+Secondly, the factorial analysis of variance assumes that the dependent variable approximates a multivariate normal distribution.  
+The assumption needs can be verified by checking graphically (either a histogram with normal distribution curve, or with a Q-Q-Plot) or tested with a goodness of fit test against normal distribution (Chi-Square or Kolmogorov-Smirnov test, the later being preferable for interval or ratio scaled data).
+
+15.
+
+The only difference between one-way and two-way ANOVA is the number of independent variables. A one-way ANOVA has one independent variable, while a two-way ANOVA has two.
+
+One-way ANOVA: Testing the relationship between shoe brand (Nike, Adidas, Saucony, Hoka) and race finish times in a marathon.
+Two-way ANOVA: Testing the relationship between shoe brand (Nike, Adidas, Saucony, Hoka), runner age group (junior, senior, master’s), and race finishing times in a marathon.
+All ANOVAs are designed to test for differences among three or more groups. If you are only testing for a difference between two groups, use a t-test instead.

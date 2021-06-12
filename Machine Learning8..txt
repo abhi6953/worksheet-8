@@ -1,0 +1,73 @@
+worksheet 8
+Machine learning
+
+1. option b
+2. option b
+3. option a
+4. option c
+5. option d
+6. option b
+7. option b
+
+8. option a,b
+9. option a,c
+10. option a,c
+
+11.
+A one hot encoding allows the representation of categorical data to be more expressive. Many machine learning algorithms cannot work with categorical data directly. 
+The categories must be converted into numbers.This is required for both input and output variables that are categorical.
+For categorical variables where no such ordinal relationship exists, the integer encoding is not enough. 
+In fact, using this encoding and allowing the model to assume a natural ordering between categories may result in poor performance or unexpected results (predictions halfway between categories).
+
+In this case, a one-hot encoding can be applied to the integer representation. This is where the integer encoded variable is removed and a new binary variable is added for each unique integer value.
+
+12.
+This is a scenario where the number of observations belonging to one class is significantly lower than those belonging to the other classes.
+Techniques:
+Random Oversampling-
+One method is to randomly resample from the minority classes (West and East) in our training dataset to meet the highest class-specific sample size, essentially copying random minority records. 
+We’ll use the module “imbalanced-learn” that has some useful functions for this purpose. We’re going to randomly resample our training dataset with the response and features labeled “train_y” and “train_X” respectively.
+
+Synthetic Minority Over-Sampling Technique (SMOTE)-
+SMOTE is a way to oversample our minority classes in a manner that does not simply duplicate random records. The technique described in more detail here uses the k nearest neighbors algorithm to find samples among the minority class that are similar, 
+and creates synthetic data points at a random interval between a given data point and its nearest neighbor.
+The advantage is that we can synthesize some variation in the resampled data to reduce overfitting. We can apply this technique using imbalanced-learn again to resample our training set.
+
+Random Undersampling-
+Instead of resampling minority records, we can instead randomly undersample the majority class to create a balanced dataset.
+Each class now has a sample size equal to the minority class.
+
+13.
+SMOTE: Synthetic Minority Over sampling Technique (SMOTE) algorithm applies KNN approach where it selects K nearest neighbors, joins them and creates the synthetic samples in the space. 
+The algorithm takes the feature vectors and its nearest neighbors, computes the distance between these vectors. The difference is multiplied by random number between (0, 1) and it is added back to feature. 
+SMOTE algorithm is a pioneer algorithm and many other algorithms are derived from SMOTE.
+
+ADASYN:  ADAptive SYNthetic (ADASYN) is based on the idea of adaptively generating minority data samples according to their distributions using K nearest neighbor. 
+The algorithm adaptively updates the distribution and there are no assumptions made for the underlying distribution of the data. The algorithm uses Euclidean distance for KNN Algorithm. 
+The key difference between ADASYN and SMOTE is that the former uses a density distribution, as a criterion to automatically decide the number of synthetic samples that must be generated for each minority sample by adaptively changing the weights of the different minority samples to compensate for the skewed distributions. 
+The latter generates the same number of synthetic samples for each original minority sample.
+
+14.
+GridSearchCV tries all the combinations of the values passed in the dictionary and evaluates the model for each combination using the Cross-Validation method. Hence after using this function we get accuracy/loss for every combination of hyperparameters and we can choose the one with the best performance.
+Suspecting GridSearchCV copies the complete data 4 times (and some overhead because of dispatch). The partial_fit function has no use in this context (it's for customized partial-fittings when the memory can't holt the whole data; but a generator-based approach must be implement first). Of course we can implement some highly complex grid-search alternative using partial-fit with shared memory or other approaches.
+
+15.
+There are three error metrics that are commonly used for evaluating and reporting the performance of a regression model; they are:
+Mean Squared Error (MSE).
+Root Mean Squared Error (RMSE).
+Mean Absolute Error (MAE)
+
+Mean Squared Error-Mean Squared Error, or MSE for short, is a popular error metric for regression problems.
+It is also an important loss function for algorithms fit or optimized using the least squares framing of a regression problem. 
+Here “least squares” refers to minimizing the mean squared error between predictions and expected values.
+The MSE is calculated as the mean or average of the squared differences between predicted and expected target values in a dataset.
+
+The Root Mean Squared Error-, or RMSE, is an extension of the mean squared error.
+Importantly, the square root of the error is calculated, which means that the units of the RMSE are the same as the original units of the target value that is being predicted.
+For example, if your target variable has the units “dollars,” then the RMSE error score will also have the unit “dollars” and not “squared dollars” like the MSE.
+As such, it may be common to use MSE loss to train a regression predictive model, and to use RMSE to evaluate and report its performance.
+
+Mean Absolute Error-, or MAE, is a popular metric because, like RMSE, the units of the error score match the units of the target value that is being predicted.
+Unlike the RMSE, the changes in MAE are linear and therefore intuitive.
+That is, MSE and RMSE punish larger errors more than smaller errors, inflating or magnifying the mean error score. 
+This is due to the square of the error value. The MAE does not give more or less weight to different types of errors and instead the scores increase linearly with increases in error.
